@@ -29,7 +29,7 @@
 				<div class="col-md-3">
 					<div class="footer-widget">
 						<div class="footer-logo">
-							<a href="index.html" class="logo"><img src="{{ asset('public/landing/img/logo-alt.png') }}" alt=""></a>
+							<a href="index.html" class="logo"><img style="width:180px" src="{{ asset('public/assets/img/florist-logo.png') }}" alt=""></a>
 						</div>
 						<p>Nec feugiat nisl pretium fusce id velit ut tortor pretium. Nisl purus in mollis nunc sed. Nunc non blandit massa enim nec.</p>
 						<ul class="contact-social">

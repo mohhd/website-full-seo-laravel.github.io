@@ -5,6 +5,8 @@ namespace App\Http\Controllers\Auth;
 use App\Http\Controllers\Controller;
 use App\Providers\RouteServiceProvider;
 use Illuminate\Foundation\Auth\AuthenticatesUsers;
+use Illuminate\Http\Request;
+use Illuminate\Http\Resources\User as UserResource;
 
 class LoginController extends Controller
 {
@@ -36,5 +38,18 @@ class LoginController extends Controller
     public function __construct()
     {
         $this->middleware('guest')->except('logout');
+    }
+
+    public function login(Request $request)
+    {
+        $credentials = $request->only('email', 'password');
+        if(!$token = auth()->attempt($credentials)){
+            return response()->json(['error' => 'invalid_credentials']);
+        };
+
+        return (new UserResource($request->user()))
+                ->additional(['meta' => [
+                    'token' => $token,
+                ]]);
     }
 }

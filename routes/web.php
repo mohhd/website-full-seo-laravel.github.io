@@ -23,6 +23,7 @@ Route::get('/list-post', 'LandingController@list_blog')->name('blog.list');
 Route::get('/list-category/{category}', 'LandingController@list_category')->name('blog.category');
 Route::get('/cari', 'LandingController@cari')->name('blog.cari');
 
+
 Route::group(['middleware' => 'auth'], function () {
     Route::get('/home', 'HomeController@index')->name('home');
     Route::get('/post/tampil_hapus', 'PostController@tampil_hapus')->name('post.tampil_hapus');

@@ -50,7 +50,7 @@
 
 					<!-- logo -->
 					<div class="nav-logo">
-						<a href="index.html" class="logo"><img src="{{ asset('public/landing/img/logo.png') }}" alt=""></a>
+						<a href="#" class="logo"><img style="width:130px" src="{{ asset('public/assets/img/florist-logo.png') }}" alt=""></a>
 					</div>
 					<!-- /logo -->
 
@@ -94,8 +94,7 @@
 						</li>
 						
 						<li><a href="{{ route('blog.list') }}">List Post</a></li>
-						<li><a href="#">Health</a></li>
-						<li><a href="#">Travel</a></li>
+						
 					</ul>
 					<!-- /nav -->
 				</div>
